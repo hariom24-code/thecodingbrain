@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About : The_Coding_brain</title>
+<script src="https://kit.fontawesome.com/fb7e4fb756.js" crossorigin="anonymous"></script>
+</script>
+<style>
+    *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        nav {
+  background: dodgerblue;
+  margin-top: 10px;
+  height: 50px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  background-color: #1e90ff; /* Light dodgerblue */
+  color: white;
+}
+
+a:active {
+  color:white;
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.buttons:hover {
+  background-color:rgb(160, 222, 222);
+  color: #fff;
+}
+button:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: dodgerblue;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 10px 0;
+  }
+
+  nav ul li input[type=text] {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  input[type=text] {
+    width: 150px;
+  }
+}
+
+#Unlock {
+        margin-top: 20px;
+        color: crimson;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #ex{
+        font-size: xx-large;
+        color:red;
+        text-shadow:1px 1px green;    
+    }
+
+    #ex:hover{
+        padding: 5px;
+        color: aqua;
+        border-radius:15px;
+        border: 2px solid;
+    }
+
+    #coursebutton{
+        padding: 10px 20px; 
+        font-size: 16px;
+        border-radius: 10px;
+}
+
+    a:hover{
+      color:black;
+  text-decoration: none;
+    }
+     
+    .maindiv{
+    background-color: rgb(255, 255, 255);
+    width: 1120px;
+    height: 500px;
+    }
+
+.flex{
+    display: flex;
+}
+.fleximg{
+    position: absolute;
+    margin-left: 670px;
+}
+
+
+.container1 {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#name {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.components {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.component {
+    width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.component p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.fa-bullseye{
+    font-size: 40px; 
+    color:rgb(159, 38, 159)
+}
+.component {
+    position: relative;
+}
+
+.component-hover {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.hover-paragraph {
+    display: none;
+    position: absolute;
+    transform: translateX(-00%);
+    background-color: rgb(245, 239, 239);
+    padding: 10px;
+    margin-left: 100px;
+    border: 1px solid #4f4e4e;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    
+    text-align: center;
+}
+.component:hover .hover-paragraph {
+    display: block;
+  
+}
+.hover-paragraphalg {
+    display: none;
+    position: absolute;
+    transform: translateX(-00%);
+    background-color: rgb(245, 239, 239);
+    padding: 5px;
+    border: 1px solid #4f4e4e;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+   
+}
+.component:hover .hover-paragraphalg {
+    display: block;
+    margin-top: 0px;
+  }
+
+
+
+.fa-book-open-reader{
+    font-size: 40px;
+     color:rgb(86, 137, 10);
+}
+
+
+.fa-users{
+    font-size: 40px;
+    color:rgb(23, 147, 196)
+}
+
+.fa-photo-film{
+    font-size: 40px;
+    color:rgb(186, 41, 65)
+}
+
+.fa-lightbulb{
+    font-size: 40px;
+    color:rgb(244, 244, 5)
+}
+
+.fa-phone-volume{
+    font-size: 40px;
+    color:rgb(43, 118, 142)
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Style for the link */
+.course-link {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.course-link:hover {
+    text-decoration: underline;
+}
+
+/* Style for the button */
+#coursebutton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+#coursebutton a {
+    color: white;
+    text-decoration: none;
+}
+
+#coursebutton:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    #coursebutton {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+</style>  
+
+<link rel="icon" type="images" href="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" >    
+</head>
+<body >
+    <nav>
+        <div class="logo">
+          <img src="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" alt="Logo" height="35">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">    
+          <li><input type="text" name="search" placeholder="Search.."></li>    
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="cousrses.html">View Course</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html"><button type="button">Login</button></a></li>
+          <li><a href="sign.html"><button type="button">Signup</button></a></li>
+        </ul>
+      </nav>
+
+    <p>
+       <h1 id="Unlock" align="center"><u> Unlock Your Potential, Transform Your Future</u></h1>
+<br>
+<div class="container1">
+    <h1 id="name">About The Coding Brain</h1>
+    <div class="components">
+        <div class="component" >
+           <button class="buttons" class="mission-hover"> <i class="fa-solid fa-bullseye"></i></button>
+            <p class="hover-paragraph">"At The Coding Brain we empower individuals with advanced coding skills for tech industry excellence. Our inclusive, hands-on learning bridges academia and real-world application, fostering creativity, critical thinking, and problem-solving. We inspire lifelong tech passion, preparing adaptable graduates ready for the evolving digital landscape."
+            </p>
+            <p>Mission Statement</p>
+          </div>
+          <div class="component">
+            <button class="buttons"> <a href="https://linktr.ee/hariomkumbhkar"> <i class="fa-solid fa-users"></i></a></button>
+               <p>Social Proof</p>
+               <p class="hover-paragraphalg">Click on icon</p>
+           </div>
+          <div class="component">
+            <button class="buttons"><i class="fa-solid fa-photo-film"></i></button>
+            <p>Images and Videos</p>
+            <p class="hover-paragraphalg">Click on icon</p>
+        </div>
+       
+        <div class="component">
+          <button class="buttons"><a href="contact.html"><i class="fa-solid fa-phone-volume"></i></a></button>
+            <p>Reach Us</p>
+            <p class="hover-paragraphalg">Click on icon</p>
+          </div>
+          <div class="component">
+            <button  class="buttons"><i class="fa-solid fa-book-open-reader"></i></button>
+            <p class="hover-paragraph">"Founded with a vision to revolutionize tech education, The Coding Brain bridges the gap between academia and industry. Our story began with a commitment to fostering creativity, critical thinking, and hands-on learning. We empower students to excel in the tech world, driving innovation and embracing the future with confidence."
+            </p>
+            <p>Our Story</p>
+        </div>
+        </div>
+</div>
+<div class="container">
+    <h2><a href="cousrses.html" class="course-link"><span id="ex">Explore Our Courses</span></a></h2>
+    <p>Join The_Coding_Brain community and unleash the power of your mind!</p>
+</div>
+<div class="container">
+    <button id="coursebutton"><a href="cousrses.html">View courses</a></button>
+</div>
+</body>
+</html>

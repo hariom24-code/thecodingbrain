@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+
+            box-sizing: border-box;
+        }
+
+       body {
+            background-color: lightgrey;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+  background: dodgerblue;
+  margin-top: 10px;
+  height: 50px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  background-color: #1e90ff; /* Light dodgerblue */
+  color: white;
+}
+
+a:active {
+  color:white;
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: dodgerblue;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 10px 0;
+  }
+
+  nav ul li input[type=text] {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  input[type=text] {
+    width: 150px;
+  }
+}
+        
+
+        #logo {
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100px;
+        }
+
+        #font {
+            font-size: 30px;
+            color: goldenrod;
+            text-align: center;
+        }
+
+        #box {
+            text-align: right;
+            background: grey;
+        }
+
+        .font {
+            font-size: x-large;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        .space {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .star {
+            color: maroon;
+            text-align: center;
+        }
+
+        form {
+            width: 90%;
+            max-width: 600px;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: left;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"], input[type="password"], textarea, select {
+            width: calc(50% - 10px);
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            width: calc(100% - 22px);
+            margin: 5px;
+            padding: 10px;
+            resize: none;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            margin: 10px 5px;
+            padding: 10px 20px;
+            border: none;
+            background-color: goldenrod;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .space {
+                flex-direction: column;
+            }
+
+            .space img {
+                width: 80px;
+            }
+
+            #font {
+                font-size: 24px;
+            }
+
+            input[type="text"], input[type="number"], input[type="date"], input[type="password"], select {
+                width: calc(100% - 22px);
+                margin: 5px;
+            }
+
+            textarea {
+                width: calc(100% - 22px);
+            }
+
+            input[type="submit"], input[type="reset"] {
+                width: calc(50% - 12px);
+                margin: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form {
+                width: 100%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            #font {
+                font-size: 18px;
+            }
+
+            input[type="text"], input[type="number"], input[type="date"], input[type="password"], textarea, select {
+                width: calc(100% - 22px);
+                margin: 5px 0;
+            }
+
+            textarea {
+                width: calc(100% - 22px);
+            }
+
+            input[type="submit"], input[type="reset"] {
+                width: calc(50% - 12px);
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <img src="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" alt="Logo" height="35">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">    
+          <li><input type="text" name="search" placeholder="Search.."></li>    
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="cousrses.html">View Course</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html"><button type="button">Login</button></a></li>
+          <li><a href="sign.html"><button type="button">Signup</button></a></li>
+        </ul>
+      </nav>
+    <div class="space">
+        <img id="logo" src="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" alt="Logo">
+        <div id="font">The Coding Brain</div>
+        <img id="logo" src="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" alt="Logo">
+    </div>
+    <p class="star">***********************************************************************************************************</p>
+    <h1><u>Register yourself here</u></h1>
+    <form>
+        <label for="firstname">First name:</label>
+        <input id="firstname" type="text" required>
+        <label for="lastname">Last name:</label>
+        <input id="lastname" type="text" required><br>
+        <label for="age">Age:</label>
+        <input id="age" type="number" required><br>
+        <label for="dob">Date of Birth:</label>
+        <input id="dob" type="date" required><br>
+        <label for="email">E-mail:</label>
+        <input id="email" type="email" required><br>
+        <label for="password">Password:</label>
+        <input id="password" type="password" required><br>
+        <h3>Course duration:</h3>
+        <label>
+            <input type="radio" name="experience" value="3 months"> 3 months
+        </label><br>
+        <label>
+            <input type="radio" name="experience" value="6 months"> 6 months
+        </label><br>
+        <label>
+            <input type="radio" name="experience" value="1 year"> 1 year
+        </label><br>
+        <label for="language">Choose a programming language:</label>
+        <select id="language" required>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java">JAVA</option>
+            <option value="Python">PYTHON</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JAVA SCRIPT</option>
+            <option value="PHP">PHP</option>
+            <option value="MySQL">MYSQL</option>
+        </select><br><br>
+        <label for="reason">Why you want to join us:</label><br>
+        <textarea id="reason" rows="10" cols="40" placeholder="Type here..."></textarea><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

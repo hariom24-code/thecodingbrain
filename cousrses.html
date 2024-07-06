@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses</title>
+    <link rel="icon" type="image/png" href="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png">
+   <style>
+    /* styles.css */
+
+/* Basic Reset */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+nav {
+  background: dodgerblue;
+  margin-top: 10px;
+  height: 50px;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  background-color: #1e90ff; /* Light dodgerblue */
+  color: white;
+}
+
+a:active {
+  color:white;
+  text-decoration: none;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid dodgerblue;
+  color: dodgerblue;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: dodgerblue;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid white;
+    padding: 10px 0;
+  }
+
+  nav ul li input[type=text] {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  input[type=text] {
+    width: 150px;
+  }
+}
+
+
+
+/* Heading Styling */
+#heading {
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+/* Marquee Styling */
+#scroll{
+    background: bisque;
+    margin-top: 20px;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Course List and Image Container */
+.course-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.float {
+    flex: 1;
+    max-width: 700px;
+    margin: 10px;
+    text-align: center;
+}
+
+.float img {
+    width: 100%;
+    height: auto;
+    border: solid plum 1px;
+    border-radius: 10px;
+}
+
+#course {
+    flex: 1;
+    margin: 10px;
+    font-size: larger;
+    line-height: 30px;
+}
+
+/* Enroll Button Styling */
+.Enroll {
+    font-size: large;
+    background-color: bisque;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    transition: width 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.Enroll a {
+    color: black;
+    text-decoration: none;
+}
+
+.Enroll:hover {
+    width: 250px;
+}
+
+/* Border Container Styling */
+.border {
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #course {
+        font-size: medium;
+    }
+
+    .Enroll {
+        width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    #heading {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #scroll {
+        font-size: 12px;
+          }
+
+    .Enroll {
+        width: 150px;
+        font-size: medium;
+    }
+
+    #course {
+        font-size: medium;
+    }
+}
+
+   </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <img src="images/Create_a_Logo_Online___Free_Logo_Maker___Generator___TURBOLOGO_-_Google_Chrome_13-03-2024_00_53_19-transformed.png" alt="Logo" height="35">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">    
+          <li><input type="text" name="search" placeholder="Search.."></li>    
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="cousrses.html">View Course</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html"><button type="button">Login</button></a></li>
+          <li><a href="sign.html"><button type="button">Signup</button></a></li>
+        </ul>
+      </nav>
+    <div id="heading" align="center">
+        <h1>Our Courses</h1>
+    </div>
+    <div>
+        <nav id="scroll">
+            <marquee behaviour="scroll" direction="left">Full stack web developer course (Starting soon)</marquee>
+        </nav>
+    </div>
+    <br>  
+    <div class="course-container border">
+        <span class="float">
+            <img src="images/8e231e0aa5c7acb23e299ae2f4889fbe.png" alt="Course Image">
+        </span>
+        <ul id="course">
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Frontend Developer</li>
+            <li>Backend Developer</li>
+            <li>Full Stack Web Developer</li>
+            <li>DSA</li>
+        </ul>
+    </div>
+    <div id="none" align="center">
+        <button class="Enroll"><a href="registerForm.html">Enroll Now</a></button>
+    </div>
+</body>
+</html>
